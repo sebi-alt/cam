@@ -11,6 +11,5 @@ This is a electron app which displays a selected webcam input in a frameless win
 | s      | Lets you select a different wabcam                       |
 | c      | Closes program                                           |
 
-## The release is not signed, because I do not have the money for a certificate. Therefore, Windows will show a warning.
-
+## The .exe in releases is not signed, because I do not have the money for a certificate. Therefore, Windows will show a warning.
 [More information](https://www.electronjs.org/docs/tutorial/code-signing)

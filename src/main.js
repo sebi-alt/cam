@@ -51,5 +51,4 @@ document.body.onkeydown = (e) => {
             ipcRenderer.send('window_change', 'c');
             break;
     }
-    console.log(e.keyCode);
 };
