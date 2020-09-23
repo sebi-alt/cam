@@ -39,6 +39,9 @@ app.on('ready', () => {
         else mainWindow.setAlwaysOnTop(false);
         toggle_window_top = !toggle_window_top;
         break;
+      case 'c':
+        app.quit();
+        break;
     }
   })
 }

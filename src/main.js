@@ -1,5 +1,4 @@
 const { ipcRenderer } = require('electron');
-var WebCamera = require("webcamjs");
 
 const output = document.getElementById('output'); // output video element
 
@@ -46,6 +45,9 @@ document.body.onkeydown = (e) => {
             break;
         case 84: //t
             ipcRenderer.send('window_change', 't');
+            break;
+        case 64: //c
+            ipcRenderer.send('window_change', 'c');
             break;
     }
     console.log(e.keyCode);
