@@ -15,12 +15,12 @@ navigator.mediaDevices.enumerateDevices().then((list) => {
 })
 
 select.onchange = () => {
+    if(select.value === 'select') return;
     var constraints = {
         audio: false, video: { width: 1280, height: 720 }, deviceId: {
             exact: select.value
         }
     };
-    console.log(select.value);
     navigator.mediaDevices.getUserMedia(constraints)
         .then(function (mediaStream) {
             output.srcObject = mediaStream;
@@ -39,6 +39,7 @@ document.body.onkeydown = (e) => {
         case 83: //s
             output.style.display = 'none';
             select.style.display = 'block';
+            select.selectedIndex = 0;
             break;
         case 77: //m
             ipcRenderer.send('window_change', 'm');
@@ -46,7 +47,7 @@ document.body.onkeydown = (e) => {
         case 84: //t
             ipcRenderer.send('window_change', 't');
             break;
-        case 64: //c
+        case 67: //c
             ipcRenderer.send('window_change', 'c');
             break;
     }
